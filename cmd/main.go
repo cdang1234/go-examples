@@ -1,36 +1,39 @@
 package main
 
-import "fmt"
-
-import "github.com/cdang1234/go-examples/internal/convert"
-
-import "github.com/cdang1234/go-examples/internal/str"
+import (
+	"github.com/cdang1234/go-examples/internal/interview"
+)
 
 func main() {
-	fmt.Println("Hello World!")
-	// convert byte to int
-	convert.ByteToInt()
+	interview.OptimalPoint()
+	// interview.CommonSubstring()
 
-	// convert int to byte
-	convert.IntToByte()
+	// // convert byte to int
+	// convert.ByteToInt()
 
-	// convert string to byte
-	convert.StringToByte()
+	// // convert int to byte
+	// convert.IntToByte()
 
-	// convert byte to string
-	convert.ByteToString()
+	// // convert string to byte
+	// convert.StringToByte()
 
-	// convert string to int
-	convert.StringToInt()
+	// // convert byte to string
+	// convert.ByteToString()
 
-	// convert int to string
-	convert.IntToString()
+	// // convert string to int
+	// convert.StringToInt()
 
-	// extract character from string
-	str.ExtractCharFromString()
+	// // convert int to string
+	// convert.IntToString()
 
-	// string builder
-	str.GenerateFromStringBuilder()
+	// // extract character from string
+	// str.ExtractCharFromString()
+
+	// // string builder
+	// str.GenerateFromStringBuilder()
+
+	// // decode json into a struct
+	// json.GetMovieTitles("spiderman")
 
 	// 2D array access
 
