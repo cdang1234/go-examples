@@ -19,3 +19,8 @@ func GenerateFromStringBuilder() {
 
 	fmt.Println(str.String())
 }
+
+// range of alphabet in byte form
+// if s[i] >= 97 && s[i] <= 122 {
+// 	currChar = s[i]
+// }

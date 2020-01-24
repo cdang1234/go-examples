@@ -1,13 +1,6 @@
 package main
 
-import (
-	"github.com/cdang1234/go-examples/internal/interview"
-)
-
 func main() {
-	interview.OptimalPoint()
-	// interview.CommonSubstring()
-
 	// // convert byte to int
 	// convert.ByteToInt()
 
@@ -32,20 +25,31 @@ func main() {
 	// // string builder
 	// str.GenerateFromStringBuilder()
 
-	// // decode json into a struct
-	// json.GetMovieTitles("spiderman")
+	// sort an array of int32 in ascending order
+	// sort.Ascending()
+
+	// sort an array of int32 in descending order
+	// sort.Descending()
+
+	// binary search on sorted array
+
+	// decode json into a struct
+	// json.DecodeIntoJSON()
+
+	// Max Heap implementation
+
+	// Min Heap implementation
 
 	// 2D array access
 
-	// reference by value vs reference by pointer
+	// create a 2D array of dimmensions NxN, where N is len of a string
+
+	// Priority Queue implementation
+
+	// Stack implementation
 
 	// DFS implementation
 
 	// BFS implementation
 
-	// Max Heap implementation
-
-	// Priority Queue implementation
-
-	// Stack implementation
 }
