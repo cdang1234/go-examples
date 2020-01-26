@@ -29,6 +29,9 @@ func ByteToInt() {
 	fmt.Printf("x is: %v, n is: %v\n", x, n)
 }
 
+// 48 is 0 in byte format
+// 49 is 1 in byte format
+
 func ByteToString() {
 	var str = "Hello World"
 	var mySlice = []byte(str)
