@@ -3,6 +3,7 @@ package convert
 import (
 	"encoding/binary"
 	"fmt"
+	"reflect"
 	"strconv"
 )
 
@@ -52,4 +53,27 @@ func StringToInt() {
 func IntToString() {
 	t := strconv.Itoa(123)
 	fmt.Println(t)
+}
+
+type JSON struct {
+	value map[string]interface{}
+}
+
+func main() {
+	aMap := make(map[string]interface{})
+	aMap["x"] = 1
+	aMap["a"] = 8
+
+	bMap := make(map[string]interface{})
+	bMap["y"] = 0
+	bMap["a"] = 88
+
+	a := JSON{value: aMap}
+	b := JSON{value: bMap}
+
+	diffJSON(a, b)
+}
+
+func diffJSON(a, b JSON) {
+	reflect.TypeOf(a).String()
 }
