@@ -40,3 +40,15 @@ func SimpleFindType() {
 		println(">> z is string")
 	}
 }
+
+func FloatingPointConversion() {
+	value := float64(1.01) + 1
+	fmt.Println(reflect.TypeOf(value).String()) // float64
+
+	value = 1.01 + 1
+	fmt.Println(reflect.TypeOf(value).String()) // float64
+
+	value = 1.0 + 1
+	fmt.Println(value)                          // 2
+	fmt.Println(reflect.TypeOf(value).String()) // float64
+}

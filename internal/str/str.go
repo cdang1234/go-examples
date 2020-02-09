@@ -24,3 +24,6 @@ func GenerateFromStringBuilder() {
 // if s[i] >= 97 && s[i] <= 122 {
 // 	currChar = s[i]
 // }
+
+// regexp example
+// var IsLetter = regexp.MustCompile(`^[a-zA-Z0-9]+$`).MatchString

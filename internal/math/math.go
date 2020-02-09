@@ -1,6 +1,8 @@
 package math
 
-const MaxUint = ^uint(0)
+import "math"
+
+const MaxUint = math.MaxUint32
 const MinUint = 0
-const MaxInt = int(^uint(0) >> 1)
-const MinInt = -MaxInt - 1
+const MaxInt = math.MaxInt32
+const MinInt = math.MinInt32
