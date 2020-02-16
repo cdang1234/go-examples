@@ -33,9 +33,32 @@ func SliceMechanics() {
 	fmt.Println(s[:2]) // [1, 2]
 	fmt.Println(s[3:]) // []
 
-	// underlying data model
+	// overwrite slice's value through slice of slice
 	z := s[2:] // z points to 3rd index of s
 	z[0] = 4   // slices are pointers to underlying values
 
 	fmt.Println(s) // 1 2 4
+
+	// appending on slice of slice is dangerous
+	s = []int{0, 1, 2, 3}
+	fmt.Println(s[:1]) // [0]
+	fmt.Println(s[2:]) // [2 3]
+
+	z = append(s[:1], s[2:]...)
+	fmt.Println(z) // [0 2 3]
+	fmt.Println(s) // [0 2 2 3]
+}
+
+func InitMatrix() {
+	grid := [][]int{
+		{0, 1, 2, 3},
+		{4, 5, 6, 7},
+	}
+
+	mem := [][]int{}
+	for i := 0; i < len(grid); i++ {
+		mem = append(mem, make([]int, len(grid[0])))
+	}
+
+	fmt.Println(mem)
 }
