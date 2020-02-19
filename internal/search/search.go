@@ -2,6 +2,7 @@ package search
 
 import (
 	"fmt"
+	"math"
 	"sort"
 )
 
@@ -38,4 +39,26 @@ func BinarySearchGreaterThan() {
 	})
 
 	fmt.Println(matches)
+}
+
+// taken from capacity-to-ship-packages-within-d-days
+func CustomBinarySearch() {
+	min := math.MinInt32
+	max := 0
+	weights := []int{1, 2, 3, 4, 5, 6}
+	D := 10
+
+	works := func(i int, w []int) int { return 0 }
+
+	for min <= max {
+		curr := (max + min) / 2
+		result := works(curr, weights)
+		if result > D {
+			// check upper half
+			min = curr + 1
+		} else {
+			// check lower half
+			max = curr - 1
+		}
+	}
 }
