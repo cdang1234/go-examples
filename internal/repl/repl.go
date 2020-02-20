@@ -79,7 +79,8 @@ func (r *Processor) processEvent(event string) Event {
 
 		r.Set(components)
 
-		return Event{command: "DELETE", args: []string{components[1]}}
+		// store the event that will undo this transaction
+		return Event{command: "DELETE", args: []string{"DELETE", components[1]}}
 	case "GET":
 		if !validateInput(components, 2) {
 			return Event{}
@@ -96,7 +97,8 @@ func (r *Processor) processEvent(event string) Event {
 
 		originalKey, originalVal := r.Delete(components)
 
-		return Event{command: "SET", args: []string{originalKey, originalVal}}
+		// store the event that will undo this transaction
+		return Event{command: "SET", args: []string{"SET", originalKey, originalVal}}
 	case "COUNT":
 		if !validateInput(components, 2) {
 			return Event{}
