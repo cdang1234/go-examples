@@ -11,6 +11,7 @@ import (
 type Processor struct {
 	KeyMap   map[string]int // maps key to value
 	ValueMap map[int]int    // tracks number of keys to a value
+	Queue    *list.List
 }
 
 type Event struct {
@@ -30,8 +31,6 @@ func (r *Processor) Run() {
 	fmt.Print(">")
 
 	// event log
-	queue := list.New()
-	queue.PushBack(Event{command: "BEGIN"})
 	str := ""
 
 	for {
@@ -46,7 +45,7 @@ func (r *Processor) Run() {
 			fmt.Print("\n")
 			event := r.processEvent(str)
 			if event.command == "SET" || event.command == "DELETE" || event.command != "BEGIN" {
-				queue.PushBack(event)
+				r.Queue.PushBack(event)
 			}
 			str = ""
 			fmt.Print(">")
@@ -78,28 +77,9 @@ func (r *Processor) processEvent(event string) Event {
 			return Event{}
 		}
 
-		value, err := strconv.Atoi(components[2])
-		if err != nil {
-			panic(err)
-		}
-		// case where entry exists in key map --> must decrement old value map
-		if _, ok := r.KeyMap[components[1]]; ok {
-			oldValue := r.KeyMap[components[1]]
-			r.ValueMap[oldValue]--
-		}
+		r.Set(components)
 
-		// set new key to value mapping
-		r.KeyMap[components[1]] = value
-
-		// if value already exists in value map, then increment
-		if _, ok := r.ValueMap[value]; ok {
-			r.ValueMap[value]++
-		} else {
-			// new value. must init in value map with value of one
-			r.ValueMap[value] = 1
-		}
-
-		return Event{command: "SET", args: components[1:]}
+		return Event{command: "DELETE", args: []string{components[1]}}
 	case "GET":
 		if !validateInput(components, 2) {
 			return Event{}
@@ -114,13 +94,9 @@ func (r *Processor) processEvent(event string) Event {
 			return Event{}
 		}
 
-		// update value map
-		r.ValueMap[r.KeyMap[components[1]]]--
+		originalKey, originalVal := r.Delete(components)
 
-		// update key map
-		delete(r.KeyMap, components[1])
-
-		return Event{command: "DELETE", args: components[1:]}
+		return Event{command: "SET", args: []string{originalKey, originalVal}}
 	case "COUNT":
 		if !validateInput(components, 2) {
 			return Event{}
@@ -135,8 +111,33 @@ func (r *Processor) processEvent(event string) Event {
 
 		return Event{command: "COUNT", args: components[1:]}
 	case "BEGIN":
+		return Event{command: "BEGIN"}
 	case "COMMIT":
+		for r.Queue.Len() > 0 {
+			e := r.Queue.Front()
+			r.Queue.Remove(e)
+			if e.Value.(Event).command == "BEGIN" {
+				break
+			}
+		}
+		return Event{}
 	case "ROLLBACK":
+		for r.Queue.Len() > 0 {
+			e := r.Queue.Front()
+			r.Queue.Remove(e)
+			if e.Value.(Event).command == "BEGIN" {
+				break
+			} else {
+				// undo event
+				if e.Value.(Event).command == "DELETE" {
+					r.Delete(e.Value.(Event).args)
+				} else {
+					r.Set(e.Value.(Event).args)
+				}
+			}
+		}
+
+		return Event{}
 	}
 	return Event{}
 }
@@ -147,4 +148,40 @@ func validateInput(components []string, argsCount int) bool {
 		return false
 	}
 	return true
+}
+
+func (r *Processor) Delete(components []string) (string, string) {
+	value := r.KeyMap[components[1]]
+	key := components[1]
+
+	// update value map
+	r.ValueMap[value]--
+
+	// update key map
+	delete(r.KeyMap, key)
+
+	return key, strconv.Itoa(value)
+}
+
+func (r *Processor) Set(components []string) {
+	value, err := strconv.Atoi(components[2])
+	if err != nil {
+		panic(err)
+	}
+	// case where entry exists in key map --> must decrement old value map
+	if _, ok := r.KeyMap[components[1]]; ok {
+		oldValue := r.KeyMap[components[1]]
+		r.ValueMap[oldValue]--
+	}
+
+	// set new key to value mapping
+	r.KeyMap[components[1]] = value
+
+	// if value already exists in value map, then increment
+	if _, ok := r.ValueMap[value]; ok {
+		r.ValueMap[value]++
+	} else {
+		// new value. must init in value map with value of one
+		r.ValueMap[value] = 1
+	}
 }
