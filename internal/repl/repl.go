@@ -3,16 +3,19 @@ package repl
 import (
 	"container/list"
 	"fmt"
+	"github.com/eiannone/keyboard"
 	"strconv"
 	"strings"
-
-	"github.com/cdang1234/go-examples/internal/transaction"
-	"github.com/eiannone/keyboard"
 )
 
 type Processor struct {
 	KeyMap   map[string]int // maps key to value
 	ValueMap map[int]int    // tracks number of keys to a value
+}
+
+type Event struct {
+	command string
+	args    []string
 }
 
 func (r *Processor) Run() {
@@ -28,6 +31,7 @@ func (r *Processor) Run() {
 
 	// event log
 	queue := list.New()
+	queue.PushBack(Event{command: "BEGIN"})
 	str := ""
 
 	for {
@@ -40,7 +44,10 @@ func (r *Processor) Run() {
 		} else if key == keyboard.KeyEnter {
 			// start new line when user presses ENTER key
 			fmt.Print("\n")
-			queue.PushBack(r.processEvent(str))
+			event := r.processEvent(str)
+			if event.command == "SET" || event.command == "DELETE" || event.command != "BEGIN" {
+				queue.PushBack(event)
+			}
 			str = ""
 			fmt.Print(">")
 		} else if key == keyboard.KeySpace {
@@ -62,13 +69,13 @@ func (r *Processor) Run() {
 	}
 }
 
-func (r *Processor) processEvent(event string) transaction.Event {
+func (r *Processor) processEvent(event string) Event {
 	components := strings.Split(event, " ")
 
 	switch components[0] {
 	case "SET":
 		if !validateInput(components, 3) {
-			return transaction.Event{}
+			return Event{}
 		}
 
 		value, err := strconv.Atoi(components[2])
@@ -91,16 +98,20 @@ func (r *Processor) processEvent(event string) transaction.Event {
 			// new value. must init in value map with value of one
 			r.ValueMap[value] = 1
 		}
+
+		return Event{command: "SET", args: components[1:]}
 	case "GET":
 		if !validateInput(components, 2) {
-			return transaction.Event{}
+			return Event{}
 		}
 
 		// get value from key map
 		fmt.Println(r.KeyMap[components[1]])
+
+		return Event{command: "GET", args: components[1:]}
 	case "DELETE":
 		if !validateInput(components, 2) {
-			return transaction.Event{}
+			return Event{}
 		}
 
 		// update value map
@@ -108,9 +119,11 @@ func (r *Processor) processEvent(event string) transaction.Event {
 
 		// update key map
 		delete(r.KeyMap, components[1])
+
+		return Event{command: "DELETE", args: components[1:]}
 	case "COUNT":
 		if !validateInput(components, 2) {
-			return transaction.Event{}
+			return Event{}
 		}
 
 		value, err := strconv.Atoi(components[1])
@@ -119,8 +132,13 @@ func (r *Processor) processEvent(event string) transaction.Event {
 		}
 		// leverage value map to return number of keys with value
 		fmt.Println(r.ValueMap[value])
+
+		return Event{command: "COUNT", args: components[1:]}
+	case "BEGIN":
+	case "COMMIT":
+	case "ROLLBACK":
 	}
-	return transaction.Event{}
+	return Event{}
 }
 
 func validateInput(components []string, argsCount int) bool {
@@ -130,15 +148,3 @@ func validateInput(components []string, argsCount int) bool {
 	}
 	return true
 }
-
-// func Commit() {
-
-// }
-
-// func Rollback() {
-
-// }
-
-// func Begin() {
-
-// }
