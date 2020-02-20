@@ -11,7 +11,7 @@ import (
 type Processor struct {
 	KeyMap   map[string]int // maps key to value
 	ValueMap map[int]int    // tracks number of keys to a value
-	Queue    *list.List
+	Stack    *list.List
 }
 
 type Event struct {
@@ -44,8 +44,8 @@ func (r *Processor) Run() {
 			// start new line when user presses ENTER key
 			fmt.Print("\n")
 			event := r.processEvent(str)
-			if event.command == "SET" || event.command == "DELETE" || event.command != "BEGIN" {
-				r.Queue.PushBack(event)
+			if event.command == "SET" || event.command == "DELETE" || event.command == "BEGIN" {
+				r.Stack.PushFront(event)
 			}
 			str = ""
 			fmt.Print(">")
@@ -113,18 +113,18 @@ func (r *Processor) processEvent(event string) Event {
 	case "BEGIN":
 		return Event{command: "BEGIN"}
 	case "COMMIT":
-		for r.Queue.Len() > 0 {
-			e := r.Queue.Front()
-			r.Queue.Remove(e)
+		for r.Stack.Len() > 0 {
+			e := r.Stack.Front()
+			r.Stack.Remove(e)
 			if e.Value.(Event).command == "BEGIN" {
 				break
 			}
 		}
 		return Event{}
 	case "ROLLBACK":
-		for r.Queue.Len() > 0 {
-			e := r.Queue.Front()
-			r.Queue.Remove(e)
+		for r.Stack.Len() > 0 {
+			e := r.Stack.Front()
+			r.Stack.Remove(e)
 			if e.Value.(Event).command == "BEGIN" {
 				break
 			} else {
