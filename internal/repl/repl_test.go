@@ -1,4 +1,4 @@
-package interview
+package repl
 
 import (
 	. "github.com/onsi/ginkgo"
