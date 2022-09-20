@@ -62,3 +62,10 @@ func InitMatrix() {
 
 	fmt.Println(mem)
 }
+
+// arr2 := []int{32, 57, 35, 22}
+// arr2 = append(arr2, 0) // Making space for the new element
+// insert(arr2, 99, 2)    // Another way to do it
+func insert(a []int, c int, i int) []int {
+	return append(a[:i], append([]int{c}, a[i:]...)...)
+}
