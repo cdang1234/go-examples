@@ -47,17 +47,20 @@ Lowest Common Ancestor of a Binary Tree
 Swap Nodes in Pairs
 Find all Anagrams in a String
 Intersection of Two Linked Lists
+Count Complete Tree Nodes
+Number of Islands
+Kth Smallest Element in a BST
 
 https://leetcode.com/problems/course-schedule/
-https://leetcode.com/problems/number-of-islands/
-https://leetcode.com/problems/minimum-path-sum/
-https://leetcode.com/problems/unique-paths/
-https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 
 Review:
 https://leetcode.com/problems/range-sum-query-2d-immutable
 https://leetcode.com/problems/coin-change
 https://leetcode.com/problems/combination-sum/
+https://leetcode.com/problems/word-break/
+https://leetcode.com/problems/perfect-squares/
+https://leetcode.com/problems/minimum-path-sum/
+https://leetcode.com/problems/unique-paths/
 
 https://leetcode.com/problems/copy-list-with-random-pointer/
 https://leetcode.com/problems/lru-cache/
@@ -68,9 +71,8 @@ https://leetcode.com/problems/top-k-frequent-elements/
 https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
 https://leetcode.com/problems/partition-labels/
 https://leetcode.com/problems/subarray-sum-equals-k/
-https://leetcode.com/problems/word-break/
 
-https://leetcode.com/problems/perfect-squares/
+https://leetcode.com/problems/number-of-islands/
 https://leetcode.com/problems/insert-delete-getrandom-o1/
 https://leetcode.com/problems/increasing-triplet-subsequence/
 https://leetcode.com/problems/design-hit-counter/
@@ -98,7 +100,6 @@ https://leetcode.com/problems/binary-search-tree-iterator/
 https://leetcode.com/problems/nth-highest-salary/
 https://leetcode.com/problems/maximal-square/
 https://leetcode.com/problems/rectangle-area/
-https://leetcode.com/problems/count-complete-tree-nodes/
 https://leetcode.com/problems/minimum-time-difference/
 https://leetcode.com/problems/find-duplicate-file-in-system/
 https://leetcode.com/problems/top-k-frequent-words/
@@ -114,3 +115,5 @@ https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/
 
 https://www.youtube.com/watch?v=GBKI9VSKdGg
 https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/
+https://www.youtube.com/watch?v=th4OnoGasMU
+https://www.youtube.com/watch?v=Sx9NNgInc3A
