@@ -67,12 +67,20 @@ K Closest Points to Origin
 Nth Highest Salary
 Kth Smallest Element in a Sorted Matrix
 Top K Frequent Elements
+Range Addition
+Insertion Sort List
+Design Hit Counter
+Divide Two Integers
+Sum of Even Numbers After Queries
+Insert Interval
+Reverse Integer
+Compare Version Numbers
+Top K Frequent Words
 
 https://leetcode.com/problems/course-schedule/
 
 Review:
-https://leetcode.com/problems/range-sum-query-2d-immutable
-https://leetcode.com/problems/coin-change
+https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters
 https://leetcode.com/problems/combination-sum/
 https://leetcode.com/problems/word-break/
 https://leetcode.com/problems/perfect-squares/
@@ -83,41 +91,56 @@ https://leetcode.com/problems/non-overlapping-intervals
 3Sum
 
 https://leetcode.com/problems/copy-list-with-random-pointer/
-https://leetcode.com/problems/lru-cache/
-https://leetcode.com/problems/sort-list
-https://leetcode.com/problems/basic-calculator-ii/
-https://leetcode.com/problems/longest-increasing-subsequence/
 https://leetcode.com/problems/partition-labels/
 https://leetcode.com/problems/subarray-sum-equals-k/
+https://leetcode.com/problems/paint-house/
+https://leetcode.com/problems/design-browser-history/
+https://leetcode.com/problems/random-pick-with-weight/
+https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/
+https://leetcode.com/problems/boats-to-save-people/
+https://leetcode.com/problems/word-search/
+https://leetcode.com/problems/number-of-matching-subsequences/
+https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/
+https://leetcode.com/problems/subdomain-visit-count/
+https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/
+https://leetcode.com/problems/exclusive-time-of-functions/
+https://leetcode.com/problems/basic-calculator-iv/
+https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/
+https://leetcode.com/problems/basic-calculator/
+https://leetcode.com/problems/text-justification/
+https://leetcode.com/problems/buildings-with-an-ocean-view/
+https://leetcode.com/problems/dot-product-of-two-sparse-vectors/
 
 https://leetcode.com/problems/insert-delete-getrandom-o1/
 https://leetcode.com/problems/increasing-triplet-subsequence/
-https://leetcode.com/problems/design-hit-counter/
 https://leetcode.com/problems/push-dominoes/
-https://leetcode.com/problems/reverse-integer/
 https://leetcode.com/problems/generate-parentheses/
-https://leetcode.com/problems/divide-two-integers/
 https://leetcode.com/problems/next-permutation/
-https://leetcode.com/problems/permutations/
-https://leetcode.com/problems/insert-interval/
 https://leetcode.com/problems/simplify-path/
 https://leetcode.com/problems/restore-ip-addresses/
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
 https://leetcode.com/problems/min-stack/
-https://leetcode.com/problems/one-edit-distance/
-https://leetcode.com/problems/compare-version-numbers/
-https://leetcode.com/problems/binary-search-tree-iterator/
-https://leetcode.com/problems/maximal-square/
-https://leetcode.com/problems/rectangle-area/
-https://leetcode.com/problems/combinations
-https://leetcode.com/problems/increasing-triplet-subsequence
 https://leetcode.com/problems/number-of-provinces/
 https://leetcode.com/problems/pyramid-transition-matrix/
-https://leetcode.com/problems/time-based-key-value-store/
-https://leetcode.com/problems/sum-of-even-numbers-after-queries/
 https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 https://leetcode.com/problems/longest-string-chain/
 https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/
+
+https://leetcode.com/problems/one-edit-distance/
+https://leetcode.com/problems/sort-list/
+https://leetcode.com/problems/lru-cache/
+https://leetcode.com/problems/time-based-key-value-store/
+https://leetcode.com/problems/longest-increasing-subsequence/
+https://leetcode.com/problems/binary-search-tree-iterator/
+https://leetcode.com/problems/maximal-square/
+https://leetcode.com/problems/rectangle-area/
+https://leetcode.com/problems/basic-calculator-ii/
+https://leetcode.com/problems/triangle/
+https://leetcode.com/problems/range-sum-query-2d-immutable
+https://leetcode.com/problems/coin-change
+https://leetcode.com/problems/combinations
+https://leetcode.com/problems/permutations/
 
 https://www.youtube.com/watch?v=GBKI9VSKdGg
 https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/
