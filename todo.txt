@@ -76,8 +76,16 @@ Insert Interval
 Reverse Integer
 Compare Version Numbers
 Top K Frequent Words
-
-https://leetcode.com/problems/course-schedule/
+LRU Cache
+One Edit Distance
+Sort List
+Minimum Swaps to Group All 1's Together
+Capacity To Ship Packages Within D Days
+Range Sum Query 2D - Immutable
+Least Number of Unique Integers after K Removals
+Rermutations
+Combinations
+Permutations II
 
 Review:
 https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters
@@ -103,7 +111,6 @@ https://leetcode.com/problems/number-of-matching-subsequences/
 https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/
 https://leetcode.com/problems/subdomain-visit-count/
 https://leetcode.com/problems/course-schedule-ii/
-https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/
 https://leetcode.com/problems/exclusive-time-of-functions/
 https://leetcode.com/problems/basic-calculator-iv/
 https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/
@@ -111,6 +118,8 @@ https://leetcode.com/problems/basic-calculator/
 https://leetcode.com/problems/text-justification/
 https://leetcode.com/problems/buildings-with-an-ocean-view/
 https://leetcode.com/problems/dot-product-of-two-sparse-vectors/
+https://leetcode.com/problems/binary-tree-maximum-path-sum/
+https://leetcode.com/problems/permutation-sequence/
 
 https://leetcode.com/problems/insert-delete-getrandom-o1/
 https://leetcode.com/problems/increasing-triplet-subsequence/
@@ -123,24 +132,17 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
 https://leetcode.com/problems/min-stack/
 https://leetcode.com/problems/number-of-provinces/
 https://leetcode.com/problems/pyramid-transition-matrix/
-https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 https://leetcode.com/problems/longest-string-chain/
-https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/
 
-https://leetcode.com/problems/one-edit-distance/
-https://leetcode.com/problems/sort-list/
-https://leetcode.com/problems/lru-cache/
-https://leetcode.com/problems/time-based-key-value-store/
-https://leetcode.com/problems/longest-increasing-subsequence/
 https://leetcode.com/problems/binary-search-tree-iterator/
+https://leetcode.com/problems/time-based-key-value-store/
+https://leetcode.com/problems/combinations
+https://leetcode.com/problems/course-schedule/
+https://leetcode.com/problems/longest-increasing-subsequence/
 https://leetcode.com/problems/maximal-square/
 https://leetcode.com/problems/rectangle-area/
 https://leetcode.com/problems/basic-calculator-ii/
 https://leetcode.com/problems/triangle/
-https://leetcode.com/problems/range-sum-query-2d-immutable
-https://leetcode.com/problems/coin-change
-https://leetcode.com/problems/combinations
-https://leetcode.com/problems/permutations/
 
 https://www.youtube.com/watch?v=GBKI9VSKdGg
 https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/
