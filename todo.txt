@@ -12,7 +12,7 @@ Remove Duplicates for Two Sorted Lists
 ClimbStairs
 Linked List Cycle
 Single Number
-ReverseBits
+Reverse Bits
 Number of 1 Bits
 Kth Largest Element in an Array
 Find First and Last Position of Element in Sorted Array
@@ -83,68 +83,77 @@ Minimum Swaps to Group All 1's Together
 Capacity To Ship Packages Within D Days
 Range Sum Query 2D - Immutable
 Least Number of Unique Integers after K Removals
-Rermutations
-Combinations
+Permutations
 Permutations II
+Combinations
+Dot Product of Two Sparse Vectors
+Buildings With an Ocean View
+Random Pick with Weight
+Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts
+Shortest Word Distance II
+Shortest Word Distance III
+Clone Graph
+Meeting Rooms
+Longest Common Prefix
+Subtree of Another Tree
+Set Matrix to Zeroes
+Longest Consecutive Sequence
+Subdomain Visit Count
+Number of Matching Subsequences
+Boats to Save People
+Best Time to Buy and Sell Stock II
+Convert Sorted List to Binary Search Tree
 
-Review:
-https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters
-https://leetcode.com/problems/combination-sum/
-https://leetcode.com/problems/word-break/
-https://leetcode.com/problems/perfect-squares/
-https://leetcode.com/problems/minimum-path-sum/
-https://leetcode.com/problems/unique-paths/
-https://leetcode.com/problems/non-overlapping-intervals
-4Sum
-3Sum
-
-https://leetcode.com/problems/copy-list-with-random-pointer/
-https://leetcode.com/problems/partition-labels/
-https://leetcode.com/problems/subarray-sum-equals-k/
-https://leetcode.com/problems/paint-house/
-https://leetcode.com/problems/design-browser-history/
-https://leetcode.com/problems/random-pick-with-weight/
-https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/
-https://leetcode.com/problems/boats-to-save-people/
-https://leetcode.com/problems/word-search/
-https://leetcode.com/problems/number-of-matching-subsequences/
-https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/
-https://leetcode.com/problems/subdomain-visit-count/
-https://leetcode.com/problems/course-schedule-ii/
 https://leetcode.com/problems/exclusive-time-of-functions/
-https://leetcode.com/problems/basic-calculator-iv/
-https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/
-https://leetcode.com/problems/basic-calculator/
-https://leetcode.com/problems/text-justification/
-https://leetcode.com/problems/buildings-with-an-ocean-view/
-https://leetcode.com/problems/dot-product-of-two-sparse-vectors/
-https://leetcode.com/problems/binary-tree-maximum-path-sum/
-https://leetcode.com/problems/permutation-sequence/
+https://leetcode.com/problems/triangle/
+https://leetcode.com/problems/rectangle-area/
+https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/
+https://leetcode.com/problems/game-of-life
+https://leetcode.com/problems/non-overlapping-intervals
 
-https://leetcode.com/problems/insert-delete-getrandom-o1/
-https://leetcode.com/problems/increasing-triplet-subsequence/
-https://leetcode.com/problems/push-dominoes/
-https://leetcode.com/problems/generate-parentheses/
-https://leetcode.com/problems/next-permutation/
-https://leetcode.com/problems/simplify-path/
-https://leetcode.com/problems/restore-ip-addresses/
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
-https://leetcode.com/problems/min-stack/
-https://leetcode.com/problems/number-of-provinces/
-https://leetcode.com/problems/pyramid-transition-matrix/
-https://leetcode.com/problems/longest-string-chain/
+https://leetcode.com/problems/graph-valid-tree/
+https://leetcode.com/problems/reorder-list
+https://leetcode.com/problems/design-add-and-search-words-data-structure/
+https://leetcode.com/problems/implement-trie-prefix-tree/
+https://leetcode.com/problems/course-schedule/
 
 https://leetcode.com/problems/binary-search-tree-iterator/
 https://leetcode.com/problems/time-based-key-value-store/
-https://leetcode.com/problems/combinations
-https://leetcode.com/problems/course-schedule/
+https://leetcode.com/problems/basic-calculator/
+https://leetcode.com/problems/insert-delete-getrandom-o1
+https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
+https://leetcode.com/problems/combination-sum/
+
+https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/
+https://leetcode.com/problems/design-browser-history/
+https://leetcode.com/problems/word-search
+https://leetcode.com/problems/next-permutation/
+https://leetcode.com/problems/increasing-triplet-subsequence/
+https://leetcode.com/problems/minimum-number-of-frogs-croaking/
 https://leetcode.com/problems/longest-increasing-subsequence/
 https://leetcode.com/problems/maximal-square/
-https://leetcode.com/problems/rectangle-area/
-https://leetcode.com/problems/basic-calculator-ii/
-https://leetcode.com/problems/triangle/
+https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters
+https://leetcode.com/problems/word-break/
+https://leetcode.com/problems/paint-house/
+https://leetcode.com/problems/perfect-squares/
+https://leetcode.com/problems/minimum-path-sum/
+https://leetcode.com/problems/unique-paths/
+https://leetcode.com/problems/subarray-sum-equals-k/
+https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/the-maze/
+https://leetcode.com/problems/text-justification/
+https://leetcode.com/problems/alien-dictionary/
+https://leetcode.com/problems/best-position-for-a-service-centre/
+https://leetcode.com/problems/best-meeting-point/
+https://leetcode.com/problems/binary-tree-maximum-path-sum/
+https://leetcode.com/problems/permutation-sequence/
+https://leetcode.com/problems/split-array-largest-sum/
+https://leetcode.com/problems/merge-k-sorted-lists/
+https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/
 
 https://www.youtube.com/watch?v=GBKI9VSKdGg
 https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/
 https://www.youtube.com/watch?v=th4OnoGasMU
 https://www.youtube.com/watch?v=Sx9NNgInc3A
+
+https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
